@@ -51,7 +51,6 @@ export class LambdaStack extends cdk.Stack {
             runtime: Runtime.NODEJS_16_X,
             code: Code.fromAsset(path.join(__dirname, 'lambda')),
             environment: {
-                "stageName": stageName,
                 TABLE_NAME: apiTable.tableName,
             },
         });
@@ -62,7 +61,6 @@ export class LambdaStack extends cdk.Stack {
             runtime: Runtime.NODEJS_16_X,
             code: Code.fromAsset(path.join(__dirname, 'lambda')),
             environment: {
-                stageName: stageName,
                 TABLE_NAME: apiTable.tableName,
             },
         });
